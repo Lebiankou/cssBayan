@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.acc_head {
+    display: inline-flex;
+    width: 80%;
+}
+.acc_content {
+    display: none;
+}
+input {
+ display: none;
+}
+.container:hover * input {
+    display: inline;
+}
+.acc_head:hover ~ .acc_content{
+    display: flex;
+    
+}
+input:checked ~ .acc_content{
+    display: flex;
+    justify-content: center;
+}
