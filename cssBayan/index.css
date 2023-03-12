@@ -1,30 +1,72 @@
+
 body {
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin: 0px;
+    
 }
-.container {
+.column {
     display: flex;
-    justify-content: center;
-    width: 80%;
+    flex-direction: column;
+    width: 70%;
+    
+}
+.accordion {
+ display: flex;
+ flex-direction: column;
+ cursor: pointer;
+ 
 }
 .acc_head {
-    display: inline-flex;
-    width: 80%;
+    display: flex;
+    justify-content: space-between;
 }
 .acc_content {
+    display: flex;
+    justify-content: center;
+}
+.flag {
+    visibility: hidden;
+}
+
+
+.acc_content {
     display: none;
+    cursor: pointer;
 }
 input {
- display: none;
+ cursor: pointer;
 }
-.container:hover * input {
-    display: inline;
+
+
+.column:hover * .flag {
+    visibility: visible;
 }
+.accordion:hover > .acc_content {
+    display: flex;
+}
+.accordion:hover >.flag {
+    transform: rotate(45deg);
+}
+
 .acc_head:hover ~ .acc_content{
     display: flex;
     
 }
-input:checked ~ .acc_content{
-    display: flex;
-    justify-content: center;
+.accordion:hover > .acc_head>.flag {
+    transform: rotate(45deg);
+    color: red;
 }
+
+.acc_content:hover{
+    display: flex;
+}
+input:checked ~ .acc_content {
+    display: flex;
+}
+
+input:checked > .acc_head>.flag{
+    transform: rotate(45deg);
+    color: red;
+  }
