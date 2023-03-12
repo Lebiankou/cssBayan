@@ -11,6 +11,7 @@ body {
     flex-direction: column;
     width: 70%;
     
+    
 }
 .accordion {
  display: flex;
@@ -61,12 +62,25 @@ input {
 
 .acc_content:hover{
     display: flex;
+    
 }
 input:checked ~ .acc_content {
     display: flex;
 }
 
-input:checked > .acc_head>.flag{
+input:checked ~ .acc_head>.flag{
     transform: rotate(45deg);
     color: red;
   }
+
+input:checked > .acc_head>.flag{
+    transform: rotate(45deg);
+    color: red;
+}
+
+
+@media (hover: hover) {
+    .accordion:hover .acc_head {
+        color: black;
+    }
+}
