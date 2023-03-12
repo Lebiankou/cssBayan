@@ -1,4 +1,5 @@
 
+/*comment*/
 body {
     display: flex;
     justify-content: center;
@@ -68,15 +69,15 @@ input:checked ~ .acc_content {
     display: flex;
 }
 
-input:checked ~ .acc_head>.flag{
-    transform: rotate(45deg);
-    color: red;
-  }
-
 input:checked > .acc_head>.flag{
     transform: rotate(45deg);
     color: red;
+  }
+input[type="radio"]:checked + .acc_head>.flag {
+    transform: rotate(45deg);
+    color: red
 }
+
 
 
 @media (hover: hover) {
